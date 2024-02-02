@@ -10,7 +10,7 @@ public class EnemyAttack : MonoBehaviour
 
     private void OnCollisionStay(Collision collision)
     {
-        if (collision.gameObject.GetComponent<PlayerMovement>())
+        if (collision.gameObject.GetComponent<CommonControls>())
         {
             var HealthController = collision.gameObject.GetComponent<HealthController>();
 

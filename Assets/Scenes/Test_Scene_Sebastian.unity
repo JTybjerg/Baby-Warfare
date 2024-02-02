@@ -135,14 +135,13 @@ GameObject:
   - component: {fileID: 221367521}
   - component: {fileID: 221367520}
   - component: {fileID: 221367519}
-  - component: {fileID: 221367518}
   - component: {fileID: 221367517}
   - component: {fileID: 221367524}
   - component: {fileID: 221367523}
   - component: {fileID: 221367525}
   m_Layer: 0
   m_Name: Player_pink
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -164,18 +163,6 @@ MonoBehaviour:
   OnDied:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &221367518
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 221367516}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 496acfc6b86100143951189f1ff9d4e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &221367519
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -403,9 +390,10 @@ GameObject:
   - component: {fileID: 849324587}
   - component: {fileID: 849324589}
   - component: {fileID: 849324588}
+  - component: {fileID: 849324590}
   m_Layer: 0
   m_Name: Player_blue
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -508,7 +496,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca9a452e0984d451889b1fd0c6d2c2a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  height_offset: 1
+  height_offset: 0.5
   fireButton: Fire1
   skud_speed: 20
   Skud: {fileID: 1116759651974062210, guid: 8d9a20781e1de4cd9a67c9eeeb4f235e, type: 3}
@@ -554,6 +542,23 @@ MonoBehaviour:
   _rb: {fileID: 849324588}
   _speed: 5
   _turnSpeed: 360
+--- !u!114 &849324590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 849324582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b274e1eee9204f98af23270c9d6417f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _currentHealth: 100
+  _maximumHealth: 100
+  OnDied:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1147972086
 GameObject:
   m_ObjectHideFlags: 0
