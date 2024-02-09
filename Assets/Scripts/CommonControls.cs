@@ -8,6 +8,12 @@ public class CommonControls : MonoBehaviour
     [SerializeField] private float _speed = 5;
     [SerializeField] private float _turnSpeed = 360;
     protected Vector3 _input;
+    private Animator anim;
+
+    void Start()
+    {
+        anim = GetComponent<Animator>();
+    }
 
     private void Update()
     {
@@ -43,6 +49,7 @@ public class CommonControls : MonoBehaviour
 
     private void Move()
     {
+        anim.SetFloat("Speed", _input.magnitude);
         _rb.MovePosition(transform.position + (transform.forward * _input.magnitude) * _speed * Time.deltaTime);
     }
 }

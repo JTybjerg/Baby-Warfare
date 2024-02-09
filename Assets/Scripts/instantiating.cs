@@ -16,6 +16,7 @@ public class instantiating : MonoBehaviour
     {
     Vector3 position = transform.position + new Vector3(0, height_offset, 0);
     GameObject skud = Instantiate(Skud, position, Quaternion.FromToRotation(Vector3.up, transform.forward));
+    Physics.IgnoreCollision(skud.GetComponent<Collider>(), GetComponent<Collider>());
     skud.GetComponent<Skud_movement>().movementspeed = skud_speed;
     }
 
